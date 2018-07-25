@@ -1,0 +1,53 @@
+.book-contain {
+    display: flex;
+    background-color: white;
+    border-bottom: 1rpx solid #ddd;
+    height: 288rpx;
+    width: 100%;
+}
+
+.image-view {
+    display: flex;
+    align-items: center;
+}
+
+.image-view image {
+    width: 120rpx;
+    height: 16prpx;
+    margin: 20rpx;
+}
+
+.book-introduce {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 16px;
+    color: #212121;
+    margin-top: 20rpx;
+}
+
+.book-author {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 10rpx;
+}
+
+.book-desc {
+    flex: 1;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 10rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 600rpx;
+}
+
+.book-other {
+    font-size: 14px;
+    color: #b2b2b2;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}

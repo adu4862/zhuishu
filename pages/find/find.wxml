@@ -1,0 +1,31 @@
+<view class='devider'></view>
+<view class='cell'>
+    <navigator class='cell-item arrow' url="/pages/ranking/ranking">
+        <view class='view-text-image'>
+        <image src='/assets/icon/ranking.png'></image>
+          <text >排行榜</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/theme.png'></image>
+          <text >主题书单</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/classify.png'></image>
+          <text >分类</text>
+        </view>
+      
+    </navigator>
+  
+</view>

@@ -1,0 +1,12 @@
+<view class='devider'></view>
+<view class='book-contain' wx:for="{{books}}"  wx:key="id">
+    <view class='image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'  mode="aspectFit"></image>
+    </view>
+    <view class='book-introduce'>
+        <text class='book-title'>{{item.title}}</text>
+        <text class='book-author'>作者: {{item.author}}</text>
+        <text class='book-desc'>{{item.shortIntro}}</text>
+        <text class='book-other'>{{item.latelyFollower}}人在追 | {{item.retentionRatio}}%读者留存</text>
+    </view>
+</view>

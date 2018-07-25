@@ -1,0 +1,52 @@
+<view class='devider'></view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/discuss_section.png'></image>
+          <text >综合讨论区</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/comment_section.png'></image>
+          <text >书评区</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/helper_section.png'></image>
+          <text >书荒互助区</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/girl_section.png'></image>
+          <text >女生区</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+<view class='cell'>
+    <navigator class='cell-item arrow'>
+        <view class='view-text-image'>
+        <image src='/assets/icon/yuanchuang.png'></image>
+          <text >原创区</text>
+        </view>
+      
+    </navigator>
+  
+</view>

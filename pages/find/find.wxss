@@ -1,0 +1,13 @@
+.view-text-image{
+    display: flex;
+    align-items: center
+}
+.view-text-image image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+}
+.view-text-image text{
+    color: #000;
+    margin-left: 10rpx;
+}

@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index"
+    ,"pages/find/find"
+    ,"pages/community/community"
+    ,"pages/ranking/ranking"
+    ,"pages/ranking-detail/ranking-detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+  ,
+"tabBar": {
+    "selectedColor": "#00ABFF",
+    "color": "#494949",
+    
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "书架",
+            "iconPath": "/assets/icon/home.png",
+            "selectedIconPath": "/assets/icon/home-select.png"
+        },
+        {
+            "pagePath": "pages/community/community",
+            "text": "社区",
+            "iconPath": "/assets/icon/comm.png",
+            "selectedIconPath": "/assets/icon/comm-select.png"
+        },
+        {
+            "pagePath": "pages/find/find",
+            "text": "发现",
+            "iconPath": "/assets/icon/find.png",
+            "selectedIconPath": "/assets/icon/find-select.png"
+        }
+    ]
+}
+}

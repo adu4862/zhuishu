@@ -1,0 +1,28 @@
+<view class='devider'></view>
+<view class='subject_name'>
+    <text>男生</text>
+</view>
+<view class='cell' wx:for="{{male}}" wx:key="id">
+    <navigator class='cell-item ' url='{{"/pages/ranking-detail/ranking-detail?_id="+item._id+"&monthRank="+item.monthRank+"&totalRank="+item.totalRank+"&title="+item.title}}'>
+        <view class='view-text-image'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'></image>
+          <text >{{item.title}}</text>
+        </view>
+      
+    </navigator>
+  
+</view>
+<view class='devider'></view>
+<view class='subject_name'>
+    <text>女生</text>
+</view>
+<view class='cell'  wx:for="{{female}}" wx:key="id">
+    <navigator class='cell-item ' url="/pages/ranking-detail/ranking-detail">
+        <view class='view-text-image'>
+         <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'></image>
+          <text >{{item.title}}</text>
+        </view>
+      
+    </navigator>
+  
+</view>
