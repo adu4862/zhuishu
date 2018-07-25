@@ -1,0 +1,137 @@
+.book-contain {
+    display: flex;
+    background-color: white;
+    border-bottom: 1rpx solid #ddd;
+    height: 228rpx;
+    width: 100%;
+}
+
+.image-view {
+    display: flex;
+    align-items: center;
+}
+
+.image-view image {
+    width: 120rpx;
+    height: 16prpx;
+    margin: 20rpx 30rpx;
+}
+
+.book-introduce {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 16px;
+    color: #000;
+    margin-top: 20rpx;
+}
+
+.book-author {
+    font-size: 14px;
+    color: #727272;
+    margin-top: 20rpx;
+}
+
+.book-desc {
+    flex: 1;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 40rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 600rpx;
+}
+
+.book-other {
+    font-size: 14px;
+    color: #b2b2b2;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.two-button {
+    width: 100%;
+    height: 110rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.update-button{
+     height: 70rpx;
+    width: 288rpx;
+    background-color: #3b99df;
+    border: 1rpx solid rgba(0, 0, 0, 0.1);
+    border-radius: 10rpx;
+    margin-left: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start-read-button {
+    height: 70rpx;
+    width: 288rpx;
+    background-color: #3b99df;
+    border: 1rpx solid rgba(0, 0, 0, 0.1);
+    border-radius: 10rpx;
+    margin-right: 40rpx;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.update-button image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.update-button text{
+    color: white;
+    font-size: 14px;
+    margin-left: 15rpx;
+}
+.start-read-button image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.start-read-button text{
+    color: white;
+    font-size: 14px;
+    margin-left: 15rpx;
+}
+.desc-view{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+.item-view{
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    justify-content: center;
+}
+.desc-text{
+    margin-top: 15rpx;
+    color: #727272;
+    font-size: 14px;
+}
+.content-text{
+    margin-top: 15rpx;
+    color: #212121;
+    font-size: 14px;
+    margin-bottom: 20rpx;
+}
+.introduce-text-view{
+    width: 1005;
+    height: 200rpx;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+}
+.introduce-text-view text{
+    color: #000;
+    font-size: 14px;
+    margin: 20rpx;
+}

@@ -1,0 +1,38 @@
+<view class='book-contain'>
+    <view class='image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+bookData.cover}}' mode="aspectFit"></image>
+    </view>
+    <view class='book-introduce'>
+        <text class='book-title'>{{bookData.title}}</text>
+        <text class='book-author'>{{bookData.author}} | {{bookData.cat}} | {{bookData.wordCount}}字</text>
+        <text class='book-other'>{{updated}} 更新</text>
+    </view>
+</view>
+<view class='two-button'>
+    <view class='update-button'>
+        <image src='/assets/icon/book_detail_info_add_img.png'></image>
+        <text>追更新</text>
+    </view>
+    <view class='start-read-button'>
+        <image src='/assets/icon/book_detail_info_search_img.png'></image>
+        <text>开始阅读</text>
+    </view>
+</view>
+<view class='desc-view'>
+    <view class='item-view'>
+        <text class='desc-text'>追书人数</text>
+         <text class='content-text'>{{bookData.latelyFollower}}</text>
+    </view>
+    <view class='item-view'>
+        <text class='desc-text'>读者留存率</text>
+         <text class='content-text'>{{bookData.retentionRatio}}%</text>
+    </view>
+    <view class='item-view'>
+        <text class='desc-text'>日更新字数</text>
+         <text class='content-text'>{{bookData.serializeWordCount}}</text>
+    </view>
+</view>
+<view class='introduce-text-view'>
+    <text>{{bookData.longIntro}} </text>
+</view>
+<view class='devider'></view>

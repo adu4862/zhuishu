@@ -1,5 +1,5 @@
 <view class='devider'></view>
-<view class='book-contain' wx:for="{{books}}"  wx:key="id">
+<navigator class='book-contain' wx:for="{{books}}"  wx:key="id" url='{{"/pages/book-detail/book-detail?_id="+item._id}}'>
     <view class='image-view'>
         <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'  mode="aspectFit"></image>
     </view>
@@ -9,4 +9,4 @@
         <text class='book-desc'>{{item.shortIntro}}</text>
         <text class='book-other'>{{item.latelyFollower}}人在追 | {{item.retentionRatio}}%读者留存</text>
     </view>
-</view>
+</navigator>

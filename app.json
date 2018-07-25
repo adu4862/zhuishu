@@ -5,6 +5,7 @@
     ,"pages/community/community"
     ,"pages/ranking/ranking"
     ,"pages/ranking-detail/ranking-detail"
+    ,"pages/book-detail/book-detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
