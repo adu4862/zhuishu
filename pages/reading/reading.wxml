@@ -1,0 +1,51 @@
+<view bindtap="onTextClick" style="background-color:{{textBackgroundColor}}">
+    <text class='text' style="color:{{textColor}}">{{content}}</text>
+</view>
+
+<view class='buttons' hidden="{{hidden}}" bindtap="onTextClick">
+    <view class='item-view'>
+        <image src='/assets/icon/comm-grey.png'></image>
+        <text class='content-text'>社区</text>
+    </view>
+    <!-- <view class='item-view'>
+          <image src='/assets/icon/intro.png'></image>
+         <text class='content-text'>简介</text>
+    </view> -->
+    <view class='item-view' bindtap="onThemeClick">
+        <image src='{{themeSrc}}'></image>
+        <text class='content-text'>{{themeText}}</text>
+    </view>
+    <view class='item-view'>
+        <image src='/assets/icon/book-mark.png'></image>
+        <text class='content-text'>书签</text>
+    </view>
+    <view class='item-view' bindtap="onChaptersClick">
+        <image src='/assets/icon/chapters.png'></image>
+        <text class='content-text'>目录</text>
+    </view>
+
+</view>
+<scroll-view scroll-y scroll-top="1"	 class='view-chapters' hidden="{{chapters_hidden}}" >
+    <view class='cell' wx:for="{{bookChaptersData}}" wx:key="id">
+        <view class='cell-item '  bindtap="gotoChapterClick"  id="{{item.link}}">
+            <text>{{item.title}}</text>
+        </view>
+
+    </view>
+</scroll-view >
+
+
+<view class='buttons-top-bottom' hidden="{{hidden}}" >
+    <view class='item-view' bindtap="onTopClick">
+        <image src='/assets/icon/top.png'></image>
+        <text class='content-text'>上一章</text>
+    </view>
+    <view class='devider1'></view>
+
+    <view class='item-view' bindtap="onBottomClick" bindtap="onBottomClick">
+        <image src='/assets/icon/bottom.png'></image>
+        <text class='content-text'>下一章</text>
+    </view>
+
+
+</view>

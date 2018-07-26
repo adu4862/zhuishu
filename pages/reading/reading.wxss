@@ -1,0 +1,77 @@
+.text{
+    color: #34311f;
+    font-size: 14px;
+    padding-bottom: 10rpx;
+}
+page {
+    background-color: #f0f0e1;
+}
+.buttons{
+    width: 100%;
+    height: 100rpx;
+    float: bottom;
+    background-color: #1a1a1a;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;  
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-view{
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    justify-content: center;
+}
+.content-text{
+    color: #dedede;
+    font-size: 12px;
+}
+.item-view image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.view-chapters{
+    width: 100%;
+    height: 100%;
+    float: bottom;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0rpx;
+    right: 0px;  
+    display: flex;
+    flex-direction: column;
+}
+.cell-item {
+     height: 50rpx;
+}
+.cell-item text{
+    font-size: 14px;
+    color: #000;
+}
+
+/* 上下章 */
+
+.buttons-top-bottom{
+    width: 100rpx;
+    height: 230rpx;
+    float: right;
+    background-color: #1a1a1a;
+    position: fixed;
+    bottom: 43%;
+    right: 10px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 0 solid #ffffff;
+    border-radius: 100px;
+ 
+}
+.devider1{
+    height: 20rpx;
+     width: 100%;
+     background-color: #f0f0e1;
+}

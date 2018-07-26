@@ -6,6 +6,7 @@
     ,"pages/ranking/ranking"
     ,"pages/ranking-detail/ranking-detail"
     ,"pages/book-detail/book-detail"
+    ,"pages/reading/reading"
   ],
   "window":{
     "backgroundTextStyle":"light",

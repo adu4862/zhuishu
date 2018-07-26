@@ -9,14 +9,14 @@
     </view>
 </view>
 <view class='two-button'>
-    <view class='update-button'>
+    <navigator class='update-button'>
         <image src='/assets/icon/book_detail_info_add_img.png'></image>
         <text>追更新</text>
-    </view>
-    <view class='start-read-button'>
+    </navigator>
+    <navigator class='start-read-button' url='{{"/pages/reading/reading?_id="+bookData._id}}'>
         <image src='/assets/icon/book_detail_info_search_img.png'></image>
         <text>开始阅读</text>
-    </view>
+    </navigator>
 </view>
 <view class='desc-view'>
     <view class='item-view'>
