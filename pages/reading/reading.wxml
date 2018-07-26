@@ -26,8 +26,8 @@
 
 </view>
 <scroll-view scroll-y scroll-top="1"	 class='view-chapters' hidden="{{chapters_hidden}}" >
-    <view class='cell' wx:for="{{bookChaptersData}}" wx:key="id">
-        <view class='cell-item '  bindtap="gotoChapterClick"  id="{{item.link}}">
+    <view class='cell' wx:for="{{bookChaptersData}}" wx:key="id" wx:for-index="index">
+        <view class='cell-item '  bindtap="gotoChapterClick"  id="{{item.link}}"  data-index ="{{index}}" data-titleName="{{item.title}}">
             <text>{{item.title}}</text>
         </view>
 

@@ -15,7 +15,8 @@ Page({
         day: true,
         themeText: "夜间",
         themeSrc: '/assets/icon/moon.png',
-        chapterIndex: 0
+        chapterIndex: 0,
+        _id: ""
     },
 
     onTextClick: function() {
@@ -28,10 +29,10 @@ Page({
         this.setData({
             hidden: !this.data.hidden
         });
-        if (this.data.chapterIndex <= 0 ) {
+        if (this.data.chapterIndex <= 0) {
             return;
         }
-         this.setData({
+        this.setData({
             chapterIndex: --this.data.chapterIndex
 
         });
@@ -39,17 +40,19 @@ Page({
         console.log(this.data.chapterIndex);
         var link = this.data.bookChaptersData[this.data.chapterIndex].link;
         console.log(link);
-        this.getChapterDetails(link);
+        var titleName = this.data.bookChaptersData[this.data.chapterIndex].title;
+
+        this.getChapterDetails(link, titleName);
 
     },
     onBottomClick: function() {
         this.setData({
             hidden: !this.data.hidden
         });
-        if (this.data.chapterIndex >= this.data.bookChaptersData.length){
+        if (this.data.chapterIndex >= this.data.bookChaptersData.length) {
             return;
         }
-         
+
         this.setData({
             chapterIndex: ++this.data.chapterIndex
 
@@ -57,18 +60,25 @@ Page({
 
         console.log(this.data.chapterIndex);
         var link = this.data.bookChaptersData[this.data.chapterIndex].link;
+        var titleName = this.data.bookChaptersData[this.data.chapterIndex].title;
         console.log(link);
-        this.getChapterDetails(link);
+        this.getChapterDetails(link, titleName);
 
     },
+
     gotoChapterClick: function(event) {
-        console.log(event.currentTarget.id);
+        console.log(event);
+        var index = event.currentTarget.dataset.index;
+        var titlename = event.currentTarget.dataset.titlename;
+        console.log(titlename);
         this.setData({
-            chapters_hidden: !this.data.chapters_hidden
+            chapters_hidden: !this.data.chapters_hidden,
+            chapterIndex: index
         });
-        this.getChapterDetails(event.currentTarget.id);
+        this.getChapterDetails(event.currentTarget.id, titlename);
 
     },
+
     onChaptersClick: function() {
         this.setData({
             chapters_hidden: !this.data.chapters_hidden
@@ -108,31 +118,72 @@ Page({
     onLoad: function(options) {
         console.log(options);
         var bookChaptersUrl = app.globalData.API_BASE_URL + "/mix-atoc/" + options._id + "?view=chapters";
+        this.setData({
+            _id: options._id,
 
+
+        });
         wx.request({
             url: bookChaptersUrl,
             success: (res) => {
                 console.log(res.data);
+               
                 var link = res.data.mixToc.chapters[this.data.chapterIndex].link;
-                this.setData({
-                    bookChaptersData: res.data.mixToc.chapters
+                var titleName = res.data.mixToc.chapters[this.data.chapterIndex].title;
+               
+                console.log("_id:" + this.data._id);
+                wx.getStorage({
+                    key: this.data._id,
+                    success: (res) => {
+                        var index = parseInt(res.data);	 
+                        // console.log("bookChaptersData:" + this.data.bookChaptersData);
+                        var link = this.data.bookChaptersData[index].link;
+                        var titleName = this.data.bookChaptersData[index].title;
+                        this.setData({
+                            chapterIndex: index
+                        });
+                    },
+                    fail: (res) => {
+                        console.log(res);
+                    }
+                })
 
+                this.setData({
+                    bookChaptersData: res.data.mixToc.chapters,
                 });
-                this.getChapterDetails(link);
+                this.getChapterDetails(link, titleName);
 
             }
         });
     },
 
-    getChapterDetails: function(link) {
+    getChapterDetails: function(link, titleName) {
+        wx.setNavigationBarTitle({
+            title: titleName
+        })
+        try {
+            console.log("_id:" + this.data._id);
+            wx.setStorage({
+                key: this.data._id,
+                data: this.data.chapterIndex,
+                success: (res) => {
+                    console.log(res);
+                },
+                fail: (res) => {
+                    console.log(res);
+                }
+            })
+        } catch (e) {}
         var linkUrl = "http://chapter2.zhuishushenqi.com/chapter/" + encodeURIComponent(link);
         wx.request({
             url: linkUrl,
             success: (res) => {
+                console.log(res.data);
                 this.setData({
                     content: res.data.chapter.body
 
                 });
+
                 wx.pageScrollTo({
                     scrollTop: 0
                 })
@@ -180,7 +231,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function() {
-       
+
 
     },
 
