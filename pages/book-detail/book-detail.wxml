@@ -21,18 +21,64 @@
 <view class='desc-view'>
     <view class='item-view'>
         <text class='desc-text'>追书人数</text>
-         <text class='content-text'>{{bookData.latelyFollower}}</text>
+        <text class='content-text'>{{bookData.latelyFollower}}</text>
     </view>
     <view class='item-view'>
         <text class='desc-text'>读者留存率</text>
-         <text class='content-text'>{{bookData.retentionRatio}}%</text>
+        <text class='content-text'>{{bookData.retentionRatio}}%</text>
     </view>
     <view class='item-view'>
         <text class='desc-text'>日更新字数</text>
-         <text class='content-text'>{{bookData.serializeWordCount}}</text>
+        <text class='content-text'>{{bookData.serializeWordCount}}</text>
     </view>
 </view>
 <view class='introduce-text-view'>
     <text>{{bookData.longIntro}} </text>
 </view>
 <view class='devider'></view>
+<view class='view-more-shuping'>
+    <text>热门书评</text>
+    <text>更多</text>
+</view>
+<view class='view-best-by-book' wx:for="{{bestByBookComments}}" wx:key="id">
+    <view class='comment-image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.author.avatar}}' mode="aspectFit"></image>
+    </view>
+    <view class='comment-introduce'>
+        <text class='comment-title'>{{item.author.nickname}} lv{{item.author.lv}}</text>
+        <text class='comment-author'>{{item.title}}</text>
+        <view class="shop-star">
+            <view class='star-after'>★★★★★</view>
+            <view class='star-before' style="width:{{ item.rating/5 *100 }}%;">★★★★★</view>
+        </view>
+        <text class='comment-desc'>{{item.content}}</text>
+        <view class='view-zan'>
+            <image src='/assets/icon/zan.png'></image>
+            <text class='comment-yes'>{{item.helpful.yes}}</text>
+        </view>
+
+    </view>
+</view>
+<view class='devider'></view>
+<view class='view-comm-button'>
+    <view class='text-comm-button'>
+        <text>{{bookData.title}}的社区</text>
+        <text>共有{{bookData.postCount}}个帖子</text>
+    </view>
+    <image src='/assets/icon/more.png'></image>
+</view>
+<view class='devider'></view>
+<view class='view-more-shuping'>
+    <text>推荐书单</text>
+</view>
+<navigator class='rank-contain' wx:for="{{booklists}}"  wx:key="id" url='{{"/pages/book-detail/book-detail?_id="+item._id}}'>
+    <view class='rank-image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'  mode="aspectFit"></image>
+    </view>
+    <view class='rank-introduce'>
+        <text class='rank-title'>{{item.title}}</text>
+        <text class='rank-author'> {{item.author}}</text>
+        <text class='rank-desc'>{{item.desc}}</text>
+        <text class='rank-other'>共{{item.bookCount}}本书 | {{item.collectorCount}}人收藏</text>
+    </view>
+</navigator>

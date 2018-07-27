@@ -127,31 +127,34 @@ Page({
             url: bookChaptersUrl,
             success: (res) => {
                 console.log(res.data);
-               
+                this.setData({
+                    bookChaptersData: res.data.mixToc.chapters,
+                });
+
                 var link = res.data.mixToc.chapters[this.data.chapterIndex].link;
                 var titleName = res.data.mixToc.chapters[this.data.chapterIndex].title;
-               
+
                 console.log("_id:" + this.data._id);
                 wx.getStorage({
                     key: this.data._id,
                     success: (res) => {
-                        var index = parseInt(res.data);	 
+                        var index = res.data;
                         // console.log("bookChaptersData:" + this.data.bookChaptersData);
-                        var link = this.data.bookChaptersData[index].link;
-                        var titleName = this.data.bookChaptersData[index].title;
+                        link = this.data.bookChaptersData[index].link;
+                        titleName = this.data.bookChaptersData[index].title;
                         this.setData({
                             chapterIndex: index
                         });
+                        this.getChapterDetails(link, titleName);
+                        return;
                     },
                     fail: (res) => {
                         console.log(res);
+                        this.getChapterDetails(link, titleName);
                     }
                 })
 
-                this.setData({
-                    bookChaptersData: res.data.mixToc.chapters,
-                });
-                this.getChapterDetails(link, titleName);
+                
 
             }
         });

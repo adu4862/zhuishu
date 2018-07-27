@@ -20,6 +20,7 @@
 .book-introduce {
     display: flex;
     flex-direction: column;
+    padding-right: 20rpx;
 }
 
 .book-title {
@@ -39,10 +40,10 @@
     font-size: 14px;
     color: #7a7a7a;
     margin-top: 10rpx;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 600rpx;
+    
+    width: 100%;
 }
 
 .book-other {
@@ -51,3 +52,4 @@
     margin-top: 10rpx;
     margin-bottom: 10rpx;
 }
+

@@ -15,6 +15,7 @@ Page({
   onLoad: function (options) {
       console.log(options);
       var rankingUrl = app.globalData.API_BASE_URL + "/ranking/" + options._id;
+     
       
       wx.request({
           url: rankingUrl,
@@ -24,8 +25,8 @@ Page({
                   books: res.data.ranking.books
               });
           }
-      })
-
+      });
+     
   },
 
   /**
