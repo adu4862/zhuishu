@@ -1,10 +1,14 @@
+.view-text{
+    margin: 10rpx 10rpx;
+}
 .text{
     color: #34311f;
     font-size: 14px;
-    padding-bottom: 10rpx;
+   
 }
 page {
     background-color: #f0f0e1;
+    
 }
 .buttons{
     width: 100%;

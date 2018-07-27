@@ -7,6 +7,7 @@
     ,"pages/ranking-detail/ranking-detail"
     ,"pages/book-detail/book-detail"
     ,"pages/reading/reading"
+    ,"pages/book-discussion-detail/book-discussion-detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

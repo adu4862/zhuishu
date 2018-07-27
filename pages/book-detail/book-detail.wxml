@@ -40,7 +40,7 @@
     <text>热门书评</text>
     <text>更多</text>
 </view>
-<view class='view-best-by-book' wx:for="{{bestByBookComments}}" wx:key="id">
+<navigator class='view-best-by-book' wx:for="{{bestByBookComments}}" wx:key="id" url='/pages/book-discussion-detail/book-discussion-detail?_id={{item._id}}'>
     <view class='comment-image-view'>
         <image src='{{"http://statics.zhuishushenqi.com"+item.author.avatar}}' mode="aspectFit"></image>
     </view>
@@ -58,7 +58,8 @@
         </view>
 
     </view>
-</view>
+</navigator>
+
 <view class='devider'></view>
 <view class='view-comm-button'>
     <view class='text-comm-button'>
@@ -69,11 +70,11 @@
 </view>
 <view class='devider'></view>
 <view class='view-more-shuping'>
-    <text>推荐书单</text>
+    <text>热门书评</text>
 </view>
-<navigator class='rank-contain' wx:for="{{booklists}}"  wx:key="id" url='{{"/pages/book-detail/book-detail?_id="+item._id}}'>
+<navigator class='rank-contain' wx:for="{{booklists}}" wx:key="id" url='{{"/pages/book-detail/book-detail?_id="+item._id}}'>
     <view class='rank-image-view'>
-        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'  mode="aspectFit"></image>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}' mode="aspectFit"></image>
     </view>
     <view class='rank-introduce'>
         <text class='rank-title'>{{item.title}}</text>

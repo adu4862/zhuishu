@@ -42,6 +42,7 @@
     margin-top: 10rpx;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height:50rpx;
     
     width: 100%;
 }

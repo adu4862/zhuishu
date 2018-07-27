@@ -1,0 +1,14 @@
+<view class='view-info-author'>
+    <image src='{{"http://statics.zhuishushenqi.com"+post.author.avatar}}'></image>
+    <view>
+        <text class='text-name'>{{post.author.nickname}}</text>
+        <text class='text-time'>8小时前</text>
+    </view>
+</view>
+<view class='view-title-content'>
+    <text class='text-title'>{{post.title}}</text>
+    <text class='text-content'>{{post.content}}</text>
+</view>
+<view class='view-comments-count'>
+    <text>共{{post.commentCount}}条评论</text>
+</view>

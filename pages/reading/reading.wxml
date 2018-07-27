@@ -1,8 +1,8 @@
-<view bindtap="onTextClick" style="background-color:{{textBackgroundColor}}">
+<view  class='view-text' bindtap="onTextClick" style="background-color:{{textBackgroundColor}}">
     <text class='text' style="color:{{textColor}}">{{content}}</text>
 </view>
 
-<view class='buttons' hidden="{{hidden}}" bindtap="onTextClick">
+<view  class='buttons' hidden="{{hidden}}" bindtap="onTextClick">
     <view class='item-view'>
         <image src='/assets/icon/comm-grey.png'></image>
         <text class='content-text'>社区</text>
