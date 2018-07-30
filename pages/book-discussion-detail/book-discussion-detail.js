@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-      post:{}
+      post:{},
+      comments:[]
   },
 
   /**
@@ -20,12 +21,25 @@ Page({
       });
       //获取综合讨论区帖子详情
       var disscussionUrl = app.globalData.API_BASE_URL + "/post/" + options._id;
+      //获取综合讨论区帖子详情内的评论列表
+      var disscussionCommentUrl = app.globalData.API_BASE_URL + "/post/" + options._id +"/comment?start=0&limit=20";
       wx.request({
           url: disscussionUrl,
           success: (res) => {
               console.log(res.data);
               this.setData({
                   post: res.data.post
+              });
+          }
+
+      });
+
+      wx.request({
+          url: disscussionCommentUrl,
+          success: (res) => {
+              console.log(res.data);
+              this.setData({
+                  comments: res.data.comments
               });
           }
 

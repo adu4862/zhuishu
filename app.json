@@ -8,6 +8,7 @@
     ,"pages/book-detail/book-detail"
     ,"pages/reading/reading"
     ,"pages/book-discussion-detail/book-discussion-detail"
+    ,"pages/book-list/book-list"
   ],
   "window":{
     "backgroundTextStyle":"light",

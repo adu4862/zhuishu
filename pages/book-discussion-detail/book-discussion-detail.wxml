@@ -12,3 +12,19 @@
 <view class='view-comments-count'>
     <text>共{{post.commentCount}}条评论</text>
 </view>
+
+
+<view class='view-best-by-book view-comments' wx:for="{{comments}}" wx:key="id" >
+    <view class='comment-image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.author.avatar}}' mode="aspectFit"></image>
+    </view>
+    <view class='comment-introduce'>
+        <text class='comment-title'>{{item.author.nickname}} lv{{item.author.lv}}</text>
+        <text class='comment-author'>{{item.title}}</text>
+        
+        <text class='comment-desc'>{{item.content}}</text>
+       
+           <text class='comment-yes'>{{item.helpful.yes}}</text>
+
+    </view>
+</view>

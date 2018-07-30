@@ -15,7 +15,9 @@ Page({
   onLoad: function (options) {
       console.log(options);
       var rankingUrl = app.globalData.API_BASE_URL + "/ranking/" + options._id;
-     
+      wx.setNavigationBarTitle({
+          title: options.title,
+      })
       
       wx.request({
           url: rankingUrl,

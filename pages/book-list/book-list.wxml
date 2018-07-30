@@ -1,0 +1,25 @@
+<view class='devider'></view>
+<view class='view-info-author'>
+    <image src='{{"http://statics.zhuishushenqi.com"+bookList.author.avatar}}'></image>
+    <view>
+        <text class='text-name'>{{bookList.author.nickname}}</text>
+    </view>
+</view>
+
+<navigator class='view-book-list-item' wx:for="{{bookList.books}}" wx:key="id"  url='/pages/book-detail/book-detail?_id={{item.book._id}}' open-type="redirect">
+    <view class='book-contain'>
+        <view class='image-view'>
+            <image src='{{"http://statics.zhuishushenqi.com"+item.book.cover}}' mode="aspectFit"></image>
+        </view>
+        <view class='book-introduce'>
+            <text class='book-title'>{{item.book.title}}</text>
+            <text class='book-author'>{{item.book.author}}  </text>
+            <text class='book-other'>{{item.book.cat}} | {{item.book.wordCount}}字</text>
+        </view>
+    </view>
+    <view class='devider-height-1rpx'></view>
+    <view class='view-content'>
+        <image src='/assets/icon/reader_ad_quote.png'></image>
+        <text>{{item.book.longIntro}}</text>
+    </view>
+</navigator>

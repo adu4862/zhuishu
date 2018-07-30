@@ -69,3 +69,6 @@
     color: #adadad;
     font-size: 14px;
 }
+.view-comments{
+    height: 180rpx;
+}

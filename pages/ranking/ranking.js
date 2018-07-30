@@ -26,6 +26,9 @@ Page({
    */
   onLoad: function (options) {
      this. getRankData();
+      wx.setNavigationBarTitle({
+          title: '排行榜',
+      })
   },
 
   /**
