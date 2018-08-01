@@ -1,20 +1,37 @@
-// pages/find/find.js
+// pages/classification/classification.js
+var app = getApp()
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      male:{},
+      female:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      var statisticsUrl = app.globalData.API_BASE_URL + "/cats/lv2/statistics";
+      //分类
       wx.setNavigationBarTitle({
-          title: '发现',
+          title: '分类',
       })
+      wx.request({
+          url: statisticsUrl,
+
+          success: (res) => {
+              console.log(res.data);
+              this.setData({
+                  male: res.data.male,
+                  female: res.data.female
+              });
+
+          }
+      });
   },
 
   /**

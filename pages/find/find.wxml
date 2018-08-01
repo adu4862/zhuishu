@@ -10,7 +10,7 @@
   
 </view>
 <view class='cell'>
-    <navigator class='cell-item arrow'>
+    <navigator class='cell-item arrow' url="/pages/book-list-home/book-list-home">
         <view class='view-text-image'>
         <image src='/assets/icon/theme.png'></image>
           <text >主题书单</text>
@@ -20,7 +20,7 @@
   
 </view>
 <view class='cell'>
-    <navigator class='cell-item arrow'>
+    <navigator class='cell-item arrow' url='/pages/classification/classification'>
         <view class='view-text-image'>
         <image src='/assets/icon/classify.png'></image>
           <text >分类</text>

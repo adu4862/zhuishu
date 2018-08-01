@@ -1,20 +1,45 @@
-// pages/find/find.js
+// pages/book-discussion/book-discussion.js
+var app = getApp()
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      posts:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      console.log(options);
       wx.setNavigationBarTitle({
-          title: '发现',
-      })
+          title: options.title,
+      });
+      //获取综合讨论区帖子详情
+      var disscussionUrl = app.globalData.API_BASE_URL + "/post/by-block" 
+    
+      wx.request({
+          url: disscussionUrl,
+          data:{
+              block: options.block,
+              duration:"all",
+              sort:"updated",
+              type:"all",
+              start:0,
+              limit:20
+          },
+          success: (res) => {
+              console.log(res.data);
+              this.setData({
+                  posts: res.data.posts
+              });
+          }
+
+      });
+
   },
 
   /**

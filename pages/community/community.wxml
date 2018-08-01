@@ -1,6 +1,6 @@
 <view class='devider'></view>
 <view class='cell'>
-    <navigator class='cell-item arrow'>
+    <navigator class='cell-item arrow' url='/pages/book-discussion/book-discussion?block=ramble&title=综合讨论区'>
         <view class='view-text-image'>
         <image src='/assets/icon/discuss_section.png'></image>
           <text >综合讨论区</text>
@@ -31,7 +31,7 @@
 </view>
 
 <view class='cell'>
-    <navigator class='cell-item arrow'>
+    <navigator class='cell-item arrow' url='/pages/book-discussion/book-discussion?block=girl&title=女生区'>
         <view class='view-text-image'>
         <image src='/assets/icon/girl_section.png'></image>
           <text >女生区</text>
@@ -41,7 +41,7 @@
   
 </view>
 <view class='cell'>
-    <navigator class='cell-item arrow'>
+    <navigator class='cell-item arrow'  url='/pages/book-discussion/book-discussion?block=original&title=原创区'>
         <view class='view-text-image'>
         <image src='/assets/icon/yuanchuang.png'></image>
           <text >原创区</text>

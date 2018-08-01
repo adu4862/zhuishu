@@ -1,0 +1,12 @@
+<navigator class='view-best-by-book' wx:for="{{posts}}" wx:key="id" url='/pages/book-discussion-detail/book-discussion-detail?_id={{item._id}}' >
+    <view class='comment-image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.author.avatar}}' mode="aspectFit"></image>
+    </view>
+    <view class='comment-introduce'>
+        <text class='comment-title'>{{item.author.nickname}} lv{{item.author.lv}}</text>
+        <text class='comment-author'>{{item.title}}</text>
+       
+     
+
+    </view>
+</navigator>

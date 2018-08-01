@@ -1,0 +1,19 @@
+<view class='view-text-cataName'>
+    <text>男生</text>
+</view>
+<view class='view-contain'>
+    <navigator class='view-contain-item' wx:for="{{male}}" wx:key='id' url='/pages/sub-category/sub-category?major={{item.name}}&gender=male'>
+        <text class='title'>{{item.name}}</text>
+        <text class='book-count'>{{item.bookCount}}</text>
+    </navigator>
+</view>
+
+<view class='view-text-cataName'>
+    <text>女生</text>
+</view>
+<view class='view-contain'>
+    <navigator class='view-contain-item' wx:for="{{female}}" wx:key='id' url='/pages/sub-category/sub-category?major={{item.name}}&gender=female'>
+         <text class='title'>{{item.name}}</text>
+        <text class='book-count'>{{item.bookCount}}</text>
+    </navigator>
+</view>

@@ -1,5 +1,5 @@
 
-/* 排行榜 */
+/* 书籍详情 */
 .book-contain {
     display: flex;
     background-color: white;

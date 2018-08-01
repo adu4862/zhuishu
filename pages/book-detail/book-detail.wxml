@@ -9,10 +9,10 @@
     </view>
 </view>
 <view class='two-button'>
-    <navigator class='update-button'>
+    <view class='update-button' bindtap='collection' style="background-color: {{updatecolor}}">
         <image src='/assets/icon/book_detail_info_add_img.png'></image>
-        <text>追更新</text>
-    </navigator>
+        <text>{{updateText}}</text>
+    </view>
     <navigator class='start-read-button' url='{{"/pages/reading/reading?_id="+bookData._id}}'>
         <image src='/assets/icon/book_detail_info_search_img.png'></image>
         <text>开始阅读</text>

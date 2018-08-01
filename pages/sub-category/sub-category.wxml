@@ -1,0 +1,26 @@
+<view class='view-tabbar'>
+    <view class='view-tabbar-item' bindtap="tabOnclick" data-type='new'  id='1'>
+        <text style="color:{{ newBookColor}}" >新书</text>
+    </view>
+    <view class='view-tabbar-item'  bindtap="tabOnclick" data-type='hot'   id='2'>
+        <text  style="color:{{ HotColor}}">热门</text>
+    </view>
+    <view class='view-tabbar-item'  bindtap="tabOnclick" data-type='reputation'   id='3'>
+        <text  style="color:{{ KoubeiColor}}">口碑</text>
+    </view>
+      <view class='view-tabbar-item'  bindtap="tabOnclick" data-type='over'  id='4'>
+        <text  style="color:{{ overColor}}">完结</text>
+    </view>
+</view>
+
+<navigator class='book-contain' wx:for="{{books}}"  wx:key="id" url='{{"/pages/book-detail/book-detail?_id="+item._id}}'>
+    <view class='image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}'  mode="aspectFit"></image>
+    </view>
+    <view class='book-introduce'>
+        <text class='book-title'>{{item.title}}</text>
+        <text class='book-author'>作者: {{item.author}}</text>
+        <text class='book-desc'>{{item.shortIntro}}</text>
+        <text class='book-other'>{{item.latelyFollower}}人在追 | {{item.retentionRatio}}%读者留存</text>
+    </view>
+</navigator>

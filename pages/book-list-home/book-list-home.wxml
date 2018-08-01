@@ -1,0 +1,23 @@
+<view class='view-tabbar'>
+    <view class='view-tabbar-item' bindtap="tabOnclick" data-duration='last-seven-days' data-sort='collectorCount' id='1'>
+        <text style="color:{{ weekHotColor}}" >本周最热</text>
+    </view>
+    <view class='view-tabbar-item'  bindtap="tabOnclick" data-duration='all'  data-sort='created' id='2'>
+        <text  style="color:{{ newColor}}">最新发布</text>
+    </view>
+    <view class='view-tabbar-item'  bindtap="tabOnclick" data-duration='all'  data-sort='collectorCount' id='3'>
+        <text  style="color:{{ mostColor}}">最多收藏</text>
+    </view>
+</view>
+
+<navigator class='rank-contain' wx:for="{{bookLists}}" wx:key="id" url='{{"/pages/book-list/book-list?id="+item.id}}' open-type="redirect">
+    <view class='rank-image-view'>
+        <image src='{{"http://statics.zhuishushenqi.com"+item.cover}}' mode="aspectFit"></image>
+    </view>
+    <view class='rank-introduce'>
+        <text class='rank-title'>{{item.title}}</text>
+        <text class='rank-author'> {{item.author}}</text>
+        <text class='rank-desc'>{{item.desc}}</text>
+        <text class='rank-other'>共{{item.bookCount}}本书 | {{item.collectorCount}}人收藏</text>
+    </view>
+</navigator>

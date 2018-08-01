@@ -229,3 +229,21 @@ page {
 
 
 /* ---------------------------------- */
+
+/* 封装页面的tab */
+.view-tabbar{
+    display: flex;
+    background-color: #3b99df;
+
+}
+.view-tabbar-item{
+    flex: 1;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view-tabbar-item text{
+    color: #fff;
+    font-size: 14px;
+}

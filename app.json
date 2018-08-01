@@ -9,6 +9,10 @@
     ,"pages/reading/reading"
     ,"pages/book-discussion-detail/book-discussion-detail"
     ,"pages/book-list/book-list"
+    ,"pages/book-list-home/book-list-home"
+    ,"pages/classification/classification"
+    ,"pages/sub-category/sub-category"
+    ,"pages/book-discussion/book-discussion"
   ],
   "window":{
     "backgroundTextStyle":"light",

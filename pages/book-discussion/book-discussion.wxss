@@ -1,0 +1,7 @@
+.view-best-by-book{
+    height: 220rpx;
+}
+.comment-author {
+    margin-top:20rpx;
+    overflow:visible;
+}

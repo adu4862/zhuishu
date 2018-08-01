@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.0",
+	"libVersion": "2.2.1",
 	"appid": "wx76911160a4f3fb0a",
 	"projectname": "%E8%BF%BD%E4%B9%A6",
 	"isGameTourist": false,
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -56,7 +56,25 @@
 				{
 					"id": -1,
 					"name": "书籍详情",
-					"pathName": "pages/book-detail/book-detail"
+					"pathName": "pages/book-detail/book-detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "主题书单",
+					"pathName": "pages/book-list-home/book-list-home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/classification/classification",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "社区",
+					"pathName": "pages/community/community"
 				}
 			]
 		}
