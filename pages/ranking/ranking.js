@@ -1,4 +1,6 @@
 // pages/ranking/ranking.js
+var app = getApp()
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -6,11 +8,13 @@ Page({
    */
   data: {
       female:[],
+
       male:[]
   },
     getRankData: function(){
+      var rank_url = app.globalData.API_BASE_URL + "/ranking/gender" ;
         wx.request({
-            url: 'http://api.zhuishushenqi.com/ranking/gender',
+          url: rank_url,
             success:(res)=>{
                 console.log(res.data);
                 this.setData({

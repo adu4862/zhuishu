@@ -177,7 +177,9 @@ Page({
                 }
             })
         } catch (e) {}
-        var linkUrl = "http://chapter2.zhuishushenqi.com/chapter/" + encodeURIComponent(link);
+      var linkUrl = app.globalData.API_BASE_URL +"/chapter/" + link;
+      console.log(linkUrl);
+      console.log(link);
         wx.request({
             url: linkUrl,
             success: (res) => {

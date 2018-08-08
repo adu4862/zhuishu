@@ -20,7 +20,6 @@ Page({
       });
       //获取综合讨论区帖子详情
       var disscussionUrl = app.globalData.API_BASE_URL + "/post/by-block" 
-    
       wx.request({
           url: disscussionUrl,
           data:{

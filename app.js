@@ -1,4 +1,5 @@
 //app.js
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -36,6 +37,6 @@ App({
   globalData: {
     userInfo: null,
       IMG_BASE_URL: "http://statics.zhuishushenqi.com",
-      API_BASE_URL:"http://api.zhuishushenqi.com"
+    API_BASE_URL:"https://www.youngerdan.cn/test"
   }
 })
