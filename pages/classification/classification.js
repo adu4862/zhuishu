@@ -19,7 +19,10 @@ Page({
       //分类
       wx.setNavigationBarTitle({
           title: '分类',
-      })
+      });
+      wx.showLoading({
+          title: '加载中',
+      });
       wx.request({
           url: statisticsUrl,
 
@@ -29,6 +32,7 @@ Page({
                   male: res.data.male,
                   female: res.data.female
               });
+              wx.hideLoading();
 
           }
       });

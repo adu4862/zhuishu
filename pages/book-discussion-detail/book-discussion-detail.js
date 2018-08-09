@@ -23,6 +23,9 @@ Page({
       var disscussionUrl = app.globalData.API_BASE_URL + "/post/" + options._id;
       //获取综合讨论区帖子详情内的评论列表
       var disscussionCommentUrl = app.globalData.API_BASE_URL + "/post/" + options._id +"/comment?start=0&limit=20";
+      wx.showLoading({
+          title: '加载中',
+      })
       wx.request({
           url: disscussionUrl,
           success: (res) => {
@@ -30,6 +33,7 @@ Page({
               this.setData({
                   post: res.data.post
               });
+              wx.hideLoading();
           }
 
       });

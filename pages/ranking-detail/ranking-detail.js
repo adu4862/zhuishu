@@ -18,7 +18,9 @@ Page({
       wx.setNavigationBarTitle({
           title: options.title,
       })
-      
+      wx.showLoading({
+          title: '加载中',
+      });
       wx.request({
           url: rankingUrl,
           success:(res)=>{
@@ -26,6 +28,7 @@ Page({
               this.setData({
                   books: res.data.ranking.books
               });
+              wx.hideLoading();
           }
       });
      

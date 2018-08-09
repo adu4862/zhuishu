@@ -64,6 +64,9 @@ Page({
     getBookListData: function () {
         var bookListUrl = app.globalData.API_BASE_URL + "/book/by-categories";
         //书籍详情
+        wx.showLoading({
+            title: '加载中',
+        });
         wx.request({
             url: bookListUrl,
             data: {
@@ -79,6 +82,7 @@ Page({
                     books: res.data.books
 
                 });
+                wx.hideLoading();
 
             }
         });

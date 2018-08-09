@@ -44,7 +44,9 @@ Page({
     onLoad: function(options) {
         console.log(options);
 
-     
+        wx.showLoading({
+            title: '加载中',
+        })
 
         var bookDetailsUrl = app.globalData.API_BASE_URL + "/book/" + options._id;
         var bestByBookUrl = app.globalData.API_BASE_URL + "/post/review/best-by-book?book=" + options._id;
@@ -53,7 +55,8 @@ Page({
         wx.request({
             url: bookDetailsUrl,
             success: (res) => {
-                console.log(res.data);
+                // console.log(res.data);
+                wx.hideLoading();
                 wx.setNavigationBarTitle({
                     title: res.data.title,
                 })
@@ -91,6 +94,7 @@ Page({
                 this.setData({
                     bestByBookComments: res.data.reviews
                 });
+                wx.hideLoading();
             }
 
         });
@@ -102,6 +106,7 @@ Page({
                 this.setData({
                     booklists: res.data.booklists
                 });
+                wx.hideLoading();
             }
 
         })

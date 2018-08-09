@@ -20,6 +20,9 @@ Page({
         });
         //获取书单详情
         var booListUrl = app.globalData.API_BASE_URL + "/book-list/" + options.id ;
+        wx.showLoading({
+            title: '加载中',
+        })
         wx.request({
             url: booListUrl,
             success: (res) => {
@@ -27,6 +30,7 @@ Page({
                 this.setData({
                     bookList: res.data.bookList
                 });
+                wx.hideLoading();
             }
 
         });
